@@ -1,0 +1,22 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Alt-MouseWheelLeft": "Undo",
+    "Alt-MouseWheelRight": "Redo",
+    "Alt-f": "command:format",
+    "Alt-k": "command:hover",
+    "Alt-r": "command:references",
+    "Ctrl-F2": "command:toggleBookmark",
+    "Ctrl-F5": "VSplit",
+    "Ctrl-Shift-F5": "HSplit",
+    "Ctrl-s": "Save",
+    "CtrlShift-F2": "command:clearBookmarks",
+    "CtrlSpace": "command:lspcompletion",
+    "CtrlUnderscore": "lua:comment.comment",
+    "F2": "command:nextBookmark",
+    "F4": "command:jumptag",
+    "MouseWheelDown": "ScrollDown",
+    "MouseWheelLeft": "CursorLeft",
+    "MouseWheelRight": "CursorRight",
+    "MouseWheelUp": "ScrollUp",
+    "Shift-F2": "command:prevBookmark"
+}

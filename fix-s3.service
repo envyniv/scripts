@@ -1,0 +1,9 @@
+[Unit]
+Description=Fix suspend
+
+[Service]
+ExecStart=/etc/systemd/system/fix-s3.sh
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target

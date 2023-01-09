@@ -1,0 +1,13 @@
+{
+    "colorcolumn": 80,
+    "colorscheme": "envy-tc",
+    "diffgutter": true,
+    "hlsearch": true,
+    "indentchar": "↦",
+    "lsp.ignoreTriggerCharacters": "completion,signature",
+    "lsp.server": "python=pylsp,typescript=deno lsp,rust=rls,c++=clangd,markdown=deno lsp,lua=lua-language-server",
+    "saveundo": true,
+    "scrollbar": true,
+    "tabreverse": false,
+    "tabsize": 2
+}
