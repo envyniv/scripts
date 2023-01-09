@@ -150,4 +150,4 @@ configuration {
   }
 }
 //@theme "/usr/share/rofi/themes/android_notification.rasi"
-@theme "/home/envy/.config/rofi/themes/squared-nord.rasi"
+@theme "~/.config/rofi/themes/squared-nord.rasi"

@@ -19,8 +19,8 @@ bind '"\e[B":history-search-forward'
 
 alias blog="~/scripts/blog.sh"
 
-if [ -f /home/envy/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source /home/envy/.config/synth-shell/synth-shell-prompt.sh
+if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
+	source ~/.config/synth-shell/synth-shell-prompt.sh
 fi
 
 neofetch

@@ -38,6 +38,7 @@ matches_games = [
     Match(wm_class = "Godot_Engine"),
     Match(wm_class = compile(r"steam_app_\d+")), # pretty much all Proton apps
     Match(wm_class = "Mindustry"),
+    Match(wm_class = "hl2_linux"), # tf2
 ]
 alphabet_special = "zxcvbnm"
 
@@ -93,4 +94,7 @@ def onGroupChange() -> None:
 
 @hook.subscribe.group_window_add
 def onWindowAddToGroup(group, window):
+    if group.name == specials[2][1]:
+    # ensure shit like tf2 doesn't just randomly float
+      window.cmd_disable_floating()
     return

@@ -19,19 +19,7 @@ Widgets
 This is where I set up all my widgets for reuse
 """
 
-backlight = widget.Backlight(
-    backlight_name = os.listdir('/sys/class/backlight')[0],
-    background = theme["backlight"],
-    foreground = theme["text_dark"],
-    format = "{percent:2.0%} \uf5df ",
-    decorations = [
-        PowerLineDecoration(path = "rounded_right")
-    ]
-    # mouse_callbacks = {
-    #     "Button1":lazy.function(backlight("dec")),
-    #     "Button3":lazy.function(backlight("inc")),
-    # }
-)
+bklghtpath = '/sys/class/backlight'
 
 updates = widget.CheckUpdates(
     background = theme["updates"],
@@ -123,6 +111,25 @@ widget_panel_left = [
     widget.Spacer(),
 ]
 
+def backlightWidget():
+  if len(os.listdir(bklghtpath)):
+      return [
+        widget.Backlight(
+            backlight_name = os.listdir(bklghtpath)[0],
+            background = theme["backlight"],
+            foreground = theme["text_dark"],
+            format = "{percent:2.0%} \uf5df ",
+            decorations = [
+                PowerLineDecoration(path = "rounded_right")
+            ]
+            # mouse_callbacks = {
+            #     "Button1":lazy.function(backlight("dec")),
+            #     "Button3":lazy.function(backlight("inc")),
+            # }
+        )
+      ]
+  return []
+
 widget_panel_right = [
     widget.Spacer(decorations=[PowerLineDecoration(path="rounded_right")]),
 
@@ -164,7 +171,8 @@ widget_panel_right = [
             PowerLineDecoration(path = "forward_slash")
         ]
     ),
-    backlight,
+    
+    ] + backlightWidget() + [
     widget.PulseVolume(
         # emoji = True,
         fmt = "{} \ufa7d ",
