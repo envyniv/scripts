@@ -5,6 +5,7 @@
 export PATH=$PATH:~/.local/bin
 export QT_STYLE_OVERRIDE=kvantum
 export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
+export FLATPAK_ENABLE_SDK_EXT=jdk,python,llvm15
 
 alias ls='lsd'
 alias ll='lsd -lav --ignore=..'   # show long listing of all except ".."

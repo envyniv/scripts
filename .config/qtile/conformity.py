@@ -1,9 +1,16 @@
-# This sets colors to use on screens based on the screen's background image
-wallpapers = [
-    "~/.local/share/wallpapers/4K NO Logo Pl 1951.png",
-    "~/.local/share/wallpapers/planet-purple-space-art.jpg",
-    "~/.local/share/wallpapers/Plasma_K022_4K_Winter.png",
-]
+from os import listdir
+
+def getWPs(userfolder):
+    wallpapers = []
+    # for wallpaper in listdir(userfolder + "/.local/share/wallpapers"):
+        # if wallpaper.endswith(".jpg") or wallpaper.endswith(".png"):
+    
+    # temporary patchwork
+    for wallpaper in range(8):
+        wallpapers.append(userfolder + "/.local/share/wallpapers/" + str(wallpaper+1) + ".jpg")
+    print(wallpapers)
+    return wallpapers
+
 wp_mode = "fill"
 
 theme = dict(
@@ -27,19 +34,19 @@ theme = dict(
     volume     ="#dd7090",
     clock      ='#bb99ff',
 
-    # Accent colors will vary depending on screen wallpaper
     accent     ='#9a5eb3',
     unfocused  ='#503040',
 )
 
 font_settings = dict(
-    typeface = "Ubuntu Nerd Font",
+    sans = "Ubuntu Nerd Font",
+    monospace = "mononoki Nerd Font",
     pt = 14,
 
 )
 
 widget_defaults = dict(
-    font=font_settings["typeface"],
+    font=font_settings["sans"],
     foreground=theme["text_light"],
     background=theme["background"],
     fontsize=font_settings["pt"],

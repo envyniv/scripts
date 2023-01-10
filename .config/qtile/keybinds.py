@@ -122,7 +122,7 @@ def getKeys(g):
 
 mouse_actions = [
     Drag(["mod4"], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),
-    Drag(["mod4"], "Button3", lazy.window.set_size_floating(), start=lazy.window.get_size()),
+    Drag(["mod4"], "Button3", lazy.window.kill()),
 ]
 
 def getMouse():

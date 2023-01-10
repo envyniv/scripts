@@ -7,7 +7,7 @@ from libqtile import hook, qtile
 from qtile_extras import widget
 from qtile_extras.widget.decorations import PowerLineDecoration
 
-from conformity import wallpapers
+# from conformity import wallpapers
 
 """
 Here I manage all group related things.

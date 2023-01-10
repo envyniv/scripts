@@ -1,1 +1,2 @@
 .config/micro/buffers/*
+*/__pycache__/*

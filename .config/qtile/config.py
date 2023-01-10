@@ -8,15 +8,22 @@ from libqtile.lazy import lazy
 from libqtile import hook, qtile, layout
 
 # custom imports
-from conformity import theme, widget_defaults, extension_defaults
+from conformity import theme, widget_defaults, extension_defaults, getWPs
 from keybinds import getKeys, getMouse
 from groupman import getGroups, getSpecialsAmount
 from screenman import getScreens
 
 screenMinimum = 2
 
+homefolder = expanduser('~')
+
 groups = getGroups(screenMinimum)
-screens = getScreens(groups, screenMinimum, getSpecialsAmount()) #getScreens(List[Group], NumberOfScreens:int)
+screens = getScreens(
+    groups = groups,
+    ns_screens = screenMinimum,
+    ns_specials = getSpecialsAmount(),
+    wallpapers = getWPs(homefolder)
+)
 keys = getKeys(groups)
 mouse = getMouse()
 
@@ -33,7 +40,7 @@ layouts = [
 
 @hook.subscribe.startup_once
 def autostart() -> None:
-    Popen([expanduser('~/scripts/autostart.sh')])
+    Popen([homefolder + '/scripts/autostart.sh'])
     return
 
 dgroups_key_binder = None

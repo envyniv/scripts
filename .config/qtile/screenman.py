@@ -9,7 +9,7 @@ from libqtile.lazy import lazy
 
 from qtile_extras.widget import GroupBox
 from widgets import widget_panel_left, widget_panel_right
-from conformity import theme, wallpapers, wp_mode
+from conformity import theme, wp_mode
 from widgets import gb_settings
 
 """
@@ -103,7 +103,7 @@ def backlight(action):
 #     sys.stderr.write(proc_id)
 #     return proc_id
 
-def getScreens(groups, ns_screens, ns_specials):
+def getScreens(groups, ns_screens, ns_specials, wallpapers):
   return [
     Screen(
       top = Bar(
@@ -118,6 +118,6 @@ def getScreens(groups, ns_screens, ns_specials):
         **bar_settings
       ),
       wallpaper = wallpapers[i],
-      wallpaper_mode = wp_mode,
+      wallpaper_mode = "stretch",
     ) for i in range(ns_screens)
   ]
