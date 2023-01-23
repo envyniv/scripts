@@ -1,0 +1,47 @@
+[Added Associations]
+audio/mpeg=org.kde.haruna.desktop;mpv.desktop;org.kde.elisa.desktop;
+audio/x-vorbis+ogg=org.kde.haruna.desktop;org.kde.elisa.desktop;mpv.desktop;
+audio/x-wav=org.kde.haruna.desktop;mpv.desktop;
+font/ttf=org.kde.kfontview.desktop;org.fontforge.FontForge.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;gimp.desktop;org.kde.kwrite.desktop;okularApplication_txt.desktop;librewolf.desktop;codium.desktop;micro.desktop;
+image/x-xcf=gimp.desktop;okularApplication_kimgio.desktop;
+text/html=librewolf.desktop;org.kde.kwrite.desktop;okularApplication_txt.desktop;wine-extension-txt.desktop;codium.desktop;micro.desktop;
+text/plain=micro.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;vim.desktop;wine-extension-txt.desktop;codium.desktop;
+video/mp4=mpv.desktop;com.ozmartians.VidCutter.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-YCW1W1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-YCW1W1.desktop;
+x-scheme-handler/news=userapp-Thunderbird-U490W1.desktop;
+x-scheme-handler/snews=userapp-Thunderbird-U490W1.desktop;
+x-scheme-handler/nntp=userapp-Thunderbird-U490W1.desktop;
+x-scheme-handler/feed=userapp-Thunderbird-V420W1.desktop;
+application/rss+xml=userapp-Thunderbird-V420W1.desktop;
+application/x-extension-rss=userapp-Thunderbird-V420W1.desktop;
+x-scheme-handler/webcal=userapp-Thunderbird-XHD5W1.desktop;
+x-scheme-handler/webcals=userapp-Thunderbird-XHD5W1.desktop;
+
+[Default Applications]
+audio/mpeg=org.kde.haruna.desktop;
+audio/x-vorbis+ogg=org.kde.haruna.desktop;
+audio/x-wav=org.kde.haruna.desktop;
+font/ttf=org.kde.kfontview.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;
+image/x-xcf=gimp.desktop;
+text/html=librewolf.desktop;
+text/plain=micro.desktop;
+video/mp4=mpv.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-YCW1W1.desktop
+message/rfc822=userapp-Thunderbird-YCW1W1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-YCW1W1.desktop
+x-scheme-handler/news=userapp-Thunderbird-U490W1.desktop
+x-scheme-handler/snews=userapp-Thunderbird-U490W1.desktop
+x-scheme-handler/nntp=userapp-Thunderbird-U490W1.desktop
+x-scheme-handler/feed=userapp-Thunderbird-V420W1.desktop
+application/rss+xml=userapp-Thunderbird-V420W1.desktop
+application/x-extension-rss=userapp-Thunderbird-V420W1.desktop
+x-scheme-handler/webcal=userapp-Thunderbird-XHD5W1.desktop
+text/calendar=userapp-Thunderbird-XHD5W1.desktop
+application/x-extension-ics=userapp-Thunderbird-XHD5W1.desktop
+x-scheme-handler/webcals=userapp-Thunderbird-XHD5W1.desktop
+
+[Removed Associations]
+text/html=wine-extension-htm.desktop;

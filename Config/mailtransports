@@ -1,0 +1,21 @@
+[General]
+default-transport=1763849690
+
+[Transport 1763849690]
+auth=true
+authtype=XOAUTH2
+encryption=SSL
+host=smtp.gmail.com
+id=1763849690
+name=Google Mail (envyn67)
+port=465
+storepass=true
+user=envyn67@gmail.com
+
+[Transport 513749741]
+auth=true
+encryption=TLS
+host=smtp.gmail.com
+id=513749741
+name=smtp.gmail.com
+user=daviawesome67@gmail.com

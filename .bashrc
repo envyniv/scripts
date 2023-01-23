@@ -1,27 +1,29 @@
-#
-# ~/.bashrc
-#
+export FUNCNEST=100 # forkbomb killer
+export HISTFILESIZE=5000
+export HISTSIZE=500
 
-export PATH=$PATH:~/.local/bin
-export QT_STYLE_OVERRIDE=kvantum
-export SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS=0
-export FLATPAK_ENABLE_SDK_EXT=jdk,python,llvm15
+# if [ "$TERM" = "linux" ]; then
+	# printf %b '\e[40m' '\e[8]' # set default background to color 0 'dracula-bg'
+	# printf %b '\e[37m' '\e[8]' # set default foreground to color 7 'dracula-fg'
+	# printf %b '\e]P0282a36'    # redefine 'black'          as 'dracula-bg'
+	# printf %b '\e]P86272a4'    # redefine 'bright-black'   as 'dracula-comment'
+	# printf %b '\e]P1ff5555'    # redefine 'red'            as 'dracula-red'
+	# printf %b '\e]P9ff7777'    # redefine 'bright-red'     as '#ff7777'
+	# printf %b '\e]P250fa7b'    # redefine 'green'          as 'dracula-green'
+	# printf %b '\e]PA70fa9b'    # redefine 'bright-green'   as '#70fa9b'
+	# printf %b '\e]P3f1fa8c'    # redefine 'brown'          as 'dracula-yellow'
+	# printf %b '\e]PBffb86c'    # redefine 'bright-brown'   as 'dracula-orange'
+	# printf %b '\e]P4bd93f9'    # redefine 'blue'           as 'dracula-purple'
+	# printf %b '\e]PCcfa9ff'    # redefine 'bright-blue'    as '#cfa9ff'
+	# printf %b '\e]P5ff79c6'    # redefine 'magenta'        as 'dracula-pink'
+	# printf %b '\e]PDff88e8'    # redefine 'bright-magenta' as '#ff88e8'
+	# printf %b '\e]P68be9fd'    # redefine 'cyan'           as 'dracula-cyan'
+	# printf %b '\e]PE97e2ff'    # redefine 'bright-cyan'    as '#97e2ff'
+	# printf %b '\e]P7f8f8f2'    # redefine 'white'          as 'dracula-fg'
+	# printf %b '\e]PFffffff'    # redefine 'bright-white'   as '#ffffff'
+	# clear
+# fi
 
-alias ls='lsd'
-alias ll='lsd -lav --ignore=..'   # show long listing of all except ".."
-alias l='lsd -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-
-[[ -z "$FUNCNEST" ]] && export FUNCNEST=100          # limits recursive functions, see 'man bash'
-
-## Use the up and down arrow keys for finding a command in history
-## (you can write some initial letters of the command first).
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
-
-alias blog="~/scripts/blog.sh"
-
-if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source ~/.config/synth-shell/synth-shell-prompt.sh
+if [[ -f "$XDG_CONFIG_HOME/synth-shell/synth-shell-prompt.sh" ]]; then
+	"$XDG_CONFIG_HOME/synth-shell/synth-shell-prompt.sh"
 fi
-
-neofetch

@@ -1,0 +1,14 @@
+[Bookmarks]
+[Recent]
+/home/envy/Scaricati/blender-2.93/
+/home/envy/Documenti/tapho1/models/
+/home/envy/Documenti/tapho1/models/blender/
+/home/envy/Documenti/tapho1/models/weapons/
+!Documents
+/home/envy/Documenti/
+!Downloads
+/home/envy/Scaricati/
+/home/envy/Documenti/tapho1/models/blender/etst/
+/home/envy/Documenti/tapho1/progs/
+/home/envy/Documenti/tapho1/src/models/
+/home/envy/Scaricati/io_revolt/

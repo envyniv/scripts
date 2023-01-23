@@ -1,0 +1,141 @@
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Video/soniceke.kdenlive,file:$HOME/Video/arg 1.kdenlive
+Recent URLs[$e]=file:$HOME/Video/,file:$HOME/Documenti/,file:$HOME/Scrivania/,file:$HOME/
+detailViewIconSize=16
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAgAAAAEAAAGJAAACDfwCAAAAAfwAAAHCAAACDQAAAVsBAAAd+gAAAAECAAAABPsAAAAKAG0AaQB4AGUAcgEAAAHwAAACCwAAAK4BAAAC+wAAABgAZQBmAGYAZQBjAHQAXwBzAHQAYQBjAGsBAAAAAP////8AAAB+AQAAAvsAAAASAHQAaQBtAGUAcgBlAG0AYQBwAQAAAAD/////AAAAWgEAAAL7AAAAEgBTAHUAYgB0AGkAdABsAGUAcwEAAAAA/////wAAAT0BAAACAAAAAgAAB4AAAAGf/AEAAAAL+wAAABQAcwBjAHIAZQBlAG4AZwByAGEAYgAAAAAA/////wAAAJwBAAAD+wAAABoAYQB1AGQAaQBvAHMAcABlAGMAdAByAHUAbQAAAAAA/////wAAAGUBAAAD/AAAAAAAAAJYAAAAiwD////6AAAAAAEAAAAF+wAAABYAcAByAG8AagBlAGMAdABfAGIAaQBuAQAAAAD/////AAAAXAEAAAP7AAAAHgB0AHIAYQBuAHMAaQB0AGkAbwBuAF8AbABpAHMAdAEAAAAA/////wAAAAQBAAAD+wAAABYAZQBmAGYAZQBjAHQAXwBsAGkAcwB0AQAAAAD/////AAAABAEAAAP7AAAAHgBjAGwAaQBwAF8AcAByAG8AcABlAHIAdABpAGUAcwEAAAAA/////wAAAFcBAAAD+wAAABgAdQBuAGQAbwBfAGgAaQBzAHQAbwByAHkBAAAAAP////8AAABbAQAAA/wAAAJZAAACkQAAAUQA////+gAAAAACAAAAAvsAAAAYAGMAbABpAHAAXwBtAG8AbgBpAHQAbwByAQAAAEQAAAHNAAAAywEAAAL7AAAADgBsAGkAYgByAGEAcgB5AQAAAAD/////AAAAlAEAAAL8AAAE6wAAApUAAAFvAP////oAAAAAAgAAAAP7AAAAHgBwAHIAbwBqAGUAYwB0AF8AbQBvAG4AaQB0AG8AcgEAAAC/AAABLAAAAMsBAAAC+wAAABAAdABlAHgAdABlAGQAaQB0AQAAAAD/////AAABYgEAAAL7AAAAGABuAG8AdABlAHMAXwB3AGkAZABnAGUAdAEAAAAA/////wAAAI4BAAAC+wAAABYAdgBlAGMAdABvAHIAcwBjAG8AcABlAAAAAAD/////AAABYAEAAAP7AAAAEAB3AGEAdgBlAGYAbwByAG0AAAAAAP////8AAADWAQAAA/sAAAAUAHIAZwBiAF8AcABhAHIAYQBkAGUAAAAAAP////8AAADWAQAAA/sAAAASAGgAaQBzAHQAbwBnAHIAYQBtAAAAAAD/////AAABVgEAAAP7AAAAEABiAGkAbgBfAGMAbABpAHAAAAAE/wAAAoEAAAI2AQAAA/sAAAAeAG8AbgBsAGkAbgBlAHIAZQBzAG8AdQByAGMAZQBzAAAAAAD/////AAABQAEAAAMAAAX2AAACDQAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABgAZQB4AHQAcgBhAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+eDP-1 HDMI-1=HDMI-1
+eDP-1 HDMI-1 Height 1920x1080 HDMI-1=860
+eDP-1 HDMI-1 Width 1920x1080 HDMI-1=1082
+eDP-1 HDMI-1 Window-Maximized 1920x1080 HDMI-1=true
+eDP-1 HDMI-1 Window-Maximized 1920x1080 eDP-1=true
+eDP-1 HDMI-1 XPosition 1920x1080 HDMI-1=536
+eDP-1 HDMI-1 YPosition 1920x1080 HDMI-1=102
+eDP-1 Height 1536x864=799
+eDP-1 Height 1920x1080 eDP-1=860
+eDP-1 Width 1536x864=1536
+eDP-1 Width 1920x1080 eDP-1=1082
+eDP-1 Window-Maximized 1536x864=true
+eDP-1 Window-Maximized 1920x1080 eDP-1=true
+eDP-1 XPosition 1536x864=0
+eDP-1 XPosition 1920x1080 eDP-1=481
+eDP-1 YPosition 1536x864=30
+eDP-1 YPosition 1920x1080 eDP-1=135
+
+[OnlineResources]
+provider=Freesound
+zoom=7
+
+[Recent Dirs]
+KdenliveClipFolder[$e]=$HOME/Video,$HOME/Documenti
+KdenliveProjectsFolder[$e]=$HOME/Video,$HOME/Documenti
+
+[Recent Files]
+File1[$e]=$HOME/Video/soniceke.kdenlive
+File2[$e]=$HOME/Video/quando sono rimasto fuori.kdenlive
+File3[$e]=$HOME/Documenti/1.kdenlive
+File4[$e]=$HOME/Video/arg 1.kdenlive
+Name1[$e]=soniceke.kdenlive
+Name2[$e]=quando sono rimasto fuori.kdenlive
+Name3[$e]=1.kdenlive
+Name4[$e]=arg 1.kdenlive
+
+[RenderWidget]
+showoptions=true
+
+[Scope_Histogram]
+autoRefresh=true
+bEnabled=true
+gEnabled=true
+logScale=false
+rEnabled=true
+realtime=false
+rec601=false
+sEnabled=false
+yEnabled=true
+
+[Scope_RGB Parade]
+autoRefresh=true
+axis=false
+gradref=false
+paintmode=0
+realtime=false
+
+[Scope_Vectorscope]
+75PBox=false
+autoRefresh=true
+axis=false
+backgroundmode=0
+colorspace_ypbpr=false
+gain=1
+iqlines=false
+paintmode=0
+realtime=false
+
+[Scope_Waveform]
+autoRefresh=true
+paintmode=0
+realtime=false
+rec601=false
+
+[TitleWidget]
+background_alpha=0
+background_color=0,0,0
+dialog_geometry=AdnQywADAAAAAAGOAAAAZAAABd0AAANaAAABkgAAAIEAAAXZAAADVgAAAAAAAAAAB4AAAAGSAAAAgQAABdkAAANW
+font_color=255,255,255
+font_family=Noto Sans,-1,72,0,50,0,0,0,0,0
+font_italic=false
+font_outline=30
+font_outline_color=0,0,0
+font_pixel_size=72
+font_underlined=false
+font_weight=50
+rect_background_alpha=255
+rect_background_color=0,0,0
+rect_foreground_alpha=255
+rect_foreground_color=0,0,0
+rect_line_width=0
+use_grid=false
+
+[UiSettings]
+ColorScheme=Brezza scuro
+
+[bin]
+treeviewheaders=AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAJ/gEAAAAIAAAACAAAADgAAAAHAAAANAAAAAYAAAAnAAAABQAAAD0AAAAEAAAASAAAAAMAAAAuAAAAAgAAAFYAAAABAAAAMQAAAlAAAAAJAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAJAAACUAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAD6AAAAABg
+
+[capture]
+decklink_extension=mov
+decklink_parameters=vcodec=dnxhd vb=145000k acodec=pcm_s16le threads=%threads
+grab_extension=mov
+grab_parameters=-crf 25 -vcodec libx264 -preset veryfast -threads 0
+v4l_extension=mpg
+v4l_parameters=qscale=4 ab=192k vcodec=mpeg2video acodec=mp2 threads=%threads
+
+[env]
+defaultaudioapp=/usr/bin/audacity
+defaultimageapp=/usr/bin/gimp
+defaultprojectfolder[$e]=$HOME/Video
+ffmpegpath[$e]=/usr/bin/ffmpeg
+ffplaypath[$e]=/usr/bin/ffplay
+ffprobepath[$e]=/usr/bin/ffprobe
+mltpath[$e]=/usr/share/mlt-7/profiles
+rendererpath[$e]=/usr/bin/melt-7
+
+[timeline]
+trackheight=67
+
+[unmanaged]
+consumerslist=cbrts,qglsl,xml,blipflash,jack,decklink,multi,null,sdl2,sdl2_audio,sdl,sdl_audio,sdl_preview,sdl_still,avformat
+default_profile=atsc_1080p_25
+defaultrescalewidth=360
+monitor_audio=false
+previewScaling=16
+producerslist=qimage,qtext,kdenlivetitle,xml,xml-string,xml-nogl,vorbis,pango,pixbuf,blipflash,count,pgm,frei0r.ising0r,frei0r.lissajous0r,frei0r.nois0r,frei0r.onecol0r,frei0r.partik0l,frei0r.plasma,frei0r.test_pat_B,frei0r.test_pat_C,frei0r.test_pat_G,frei0r.test_pat_I,frei0r.test_pat_L,frei0r.test_pat_R,decklink,abnormal,color,colour,consumer,hold,loader,melt,melt_file,noise,timewarp,tone,framebuffer,glaxnimate,avformat,avformat-novalidate
+renderProfile=WebM-VP8/Vorbis (libre)
+widgetstyle=Default
+
+[version]
+version=22.08.3

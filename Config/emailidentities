@@ -1,0 +1,25 @@
+[General]
+Default Identity=1492375266
+
+[Identity #0]
+Default Domain=swiftsf11434
+Disable Fcc=false
+Identity=Davide Azzaretto
+Image Location=
+Inline Signature=
+Name=Davide Azzaretto
+Signature Enabled=false
+uoid=1492375266
+
+[Identity #1]
+Default Domain=swiftsf11434
+Disable Fcc=false
+Identity=Senza Nome
+Image Location=
+Inline Signature=
+Name=Davide Azzaretto
+Pgp Auto Encrypt=false
+Pgp Auto Sign=false
+Signature Enabled=false
+Transport=-1
+uoid=836757444

@@ -1,0 +1,28 @@
+[$Version]
+update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_value_default_enum
+
+[LegacySession: saved at previous logout]
+count=0
+
+[Session: saved at previous logout]
+clientId1=1011811e102cb000167228754300000006970004
+clientId2=1011811e102cb000167246566000000006990006
+clientId3=1011811e102cb000167246566000000006990007
+clientId4=1011811e102cb000167246566000000006990008
+count=4
+program1=/usr/bin/keepassxc
+program2=/usr/lib/DiscoverNotifier
+program3=/usr/bin/kalendarac
+program4=/usr/bin/firewall-applet
+restartCommand1=/usr/bin/keepassxc,-session,1011811e102cb000167228754300000006970004_1672516981_846163
+restartCommand2=/usr/lib/DiscoverNotifier,-session,1011811e102cb000167246566000000006990006_1672516981_848927
+restartCommand3=/usr/bin/kalendarac,-session,1011811e102cb000167246566000000006990007_1672516981_847835
+restartCommand4=/usr/bin/firewall-applet,-session,1011811e102cb000167246566000000006990008_1672516981_852653,-name,firewall-applet
+restartStyleHint1=0
+restartStyleHint2=0
+restartStyleHint3=0
+restartStyleHint4=0
+userId1=envy
+userId2=envy
+userId3=envy
+userId4=envy

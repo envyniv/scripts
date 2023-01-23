@@ -1,0 +1,30 @@
+Caricamento dell'estensione "GIMP XCF" fallita a causa di una dipendenza non è stata soddisfatta
+Dipendenza:
+	tipo: executable
+	posizione: tracciato
+	stringa: gimp
+
+Caricamento dell'estensione "Formula (pdflatex)" fallita a causa di una dipendenza non è stata soddisfatta
+Dipendenza:
+	tipo: executable
+	posizione: tracciato
+	stringa: pdflatex
+
+Caricamento dell'estensione "XFIG Input" fallita a causa di una dipendenza non è stata soddisfatta
+Dipendenza:
+	tipo: executable
+	posizione: tracciato
+	stringa: fig2dev
+
+Caricamento dell'estensione "Optimized PNG" fallita a causa di una dipendenza non è stata soddisfatta
+Dipendenza:
+	tipo: executable
+	posizione: tracciato
+	stringa: optipng
+
+Caricamento dell'estensione "Export to PDF via Scribus" fallita a causa di una dipendenza non è stata soddisfatta
+Dipendenza:
+	tipo: executable
+	posizione: tracciato
+	stringa: scribus
+

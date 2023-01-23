@@ -1,0 +1,10 @@
+/home/envy/Documenti/tapho1/models/blender/hazmat.blend
+/home/envy/Documenti/tapho1/models/blender/player.blend
+/home/envy/Documenti/tapho1/models/blender/revshot.blend
+/home/envy/Documenti/tapho1/models/blender/grappling.blend
+/home/envy/Documenti/tapho1/models/blender/pedestal.blend
+/home/envy/Documenti/tapho1/models/blender/skull.blend
+/home/envy/Scaricati/floating_skull.blend
+/home/envy/Documenti/tapho1/models/blender/needle.blend
+/home/envy/Documenti/tapho1/models/blender/tesla.blend
+/home/envy/Documenti/tapho1/models/blender/chaingun.blend

@@ -1,0 +1,11 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-3ecd5c3e-3de5-476a-b5a0-c6b5f3ed21da]
+ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.discover.desktop,applications:org.kde.konsole.desktop,applications:codium.desktop,applications:audacity.desktop,applications:lmms.desktop,applications:org.kde.kontact.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-3-global]
+ordering=preferred://browser,applications:systemsettings.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.discover.desktop,applications:org.kde.konsole.desktop,applications:codium.desktop,applications:audacity.desktop,applications:lmms.desktop,applications:org.kde.kontact.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-50-3ecd5c3e-3de5-476a-b5a0-c6b5f3ed21da]
+ordering=applications:audacity.desktop,applications:lmms.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kdenlive.desktop,applications:org.kde.konsole.desktop,applications:systemsettings.desktop,preferred://browser,applications:im.riot.Riot.desktop,applications:org.godotengine.Godot.desktop,applications:com.vscodium.codium.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-50-global]
+ordering=applications:audacity.desktop,applications:lmms.desktop,applications:org.kde.discover.desktop,applications:org.kde.dolphin.desktop,applications:org.kde.kdenlive.desktop,applications:org.kde.konsole.desktop,applications:systemsettings.desktop,preferred://browser,applications:im.riot.Riot.desktop,applications:org.godotengine.Godot.desktop,applications:com.vscodium.codium.desktop

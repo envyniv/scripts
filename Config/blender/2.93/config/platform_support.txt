@@ -1,0 +1,2 @@
+{Intel/Mesa Intel(R) UHD Graphics (JSL)/4.6 (Core Profile) Mesa 22.1.7}=SUPPORTED
+{Intel/Mesa Intel(R) UHD Graphics (JSL)/4.6 (Core Profile) Mesa 22.3.2}=SUPPORTED

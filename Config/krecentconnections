@@ -1,0 +1,7 @@
+[3ds]
+Port=5000
+Type=FTP
+URL=ftp://192.168.1.75:5000/
+
+[General]
+Index=3ds

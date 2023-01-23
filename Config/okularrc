@@ -1,0 +1,52 @@
+[Desktop Entry]
+FullScreen=false
+
+[MainWindow]
+HDMI-1=HDMI-1
+HDMI-1 Height 1920x1080 HDMI-1=1007
+HDMI-1 Width 1920x1080 HDMI-1=1920
+HDMI-1 Window-Maximized 1920x1080=true
+HDMI-1 Window-Maximized 1920x1080 HDMI-1=true
+HDMI-1 XPosition 1920x1080=384
+HDMI-1 XPosition 1920x1080 HDMI-1=0
+HDMI-1 YPosition 1920x1080=202
+HDMI-1 YPosition 1920x1080 HDMI-1=29
+State=AAAA/wAAAAD9AAAAAAAAAjIAAADsAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAsAHEAdQBpAGMAawBBAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHICAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAIgBhAG4AbgBvAHQAYQB0AGkAbwBuAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA==
+ToolBarsMovable=Disabled
+eDP-1=eDP-1
+eDP-1 HDMI-1=HDMI-1
+eDP-1 HDMI-1 Height 1920x1080 HDMI-1=517
+eDP-1 HDMI-1 Width 1920x1080 HDMI-1=946
+eDP-1 HDMI-1 XPosition 1920x1080=2304
+eDP-1 HDMI-1 XPosition 1920x1080 HDMI-1=2885
+eDP-1 HDMI-1 YPosition 1920x1080=182
+eDP-1 HDMI-1 YPosition 1920x1080 HDMI-1=23
+eDP-1 Window-Maximized 1920x1080 eDP-1=true
+eDP-1 XPosition 1536x864=531
+eDP-1 XPosition 1920x1080=384
+eDP-1 XPosition 1920x1080 eDP-1=384
+eDP-1 YPosition 1536x864=34
+eDP-1 YPosition 1920x1080=182
+eDP-1 YPosition 1920x1080 eDP-1=180
+
+[Recent Files]
+File1[$e]=$HOME/Scaricati/FOF-ForceonForce.pdf
+File10[$e]=$HOME/Documents/Projects/scripts/.themes/gtk-master/README.md
+File2[$e]=$HOME/test.md
+File3[$e]=$HOME/Scaricati/Pan Europe_MHI_September_Final.pdf
+File4[$e]=$HOME/Documenti/scuola/4th/tpsi/set-ora.md
+File5[$e]=$HOME/Documenti/scuola/4th/tpsi/verifica-tpsi-alefic.pdf
+File6[$e]=$HOME/scripts/screenshot.sh
+File7[$e]=$HOME/Documenti/scuola/4th/informatica/educazione civica/topikk.pdf
+File8[$e]=$HOME/Documenti/scuola/4th/inglese/Topic.md
+File9[$e]=$HOME/Documenti/scuola/4th/inglese/trinity/Topic.pdf
+Name1[$e]=FOF-ForceonForce.pdf
+Name10[$e]=README.md
+Name2[$e]=test.md
+Name3[$e]=Pan Europe_MHI_September_Final.pdf
+Name4[$e]=set-ora.md
+Name5[$e]=verifica-tpsi-alefic.pdf
+Name6[$e]=screenshot.sh
+Name7[$e]=topikk.pdf
+Name8[$e]=Topic.md
+Name9[$e]=Topic.pdf
