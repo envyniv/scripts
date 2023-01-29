@@ -1,2 +1,7 @@
-.config/micro/buffers/*
-*/__pycache__/*
+__pycache__/
+.mypy_cache/
+*.py[cod]
+*$py.class
+
+buffers/
+

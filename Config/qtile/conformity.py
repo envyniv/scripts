@@ -2,12 +2,9 @@ from os import listdir
 
 def getWPs(userfolder):
     wallpapers = []
-    # for wallpaper in listdir(userfolder + "/.local/share/wallpapers"):
-        # if wallpaper.endswith(".jpg") or wallpaper.endswith(".png"):
-    
-    # temporary patchwork
-    for wallpaper in range(8):
-        wallpapers.append(userfolder + "/.local/share/wallpapers/" + str(wallpaper+1) + ".jpg")
+    for wallpaper in listdir(userfolder + "/.wallpapers"):
+      if wallpaper.endswith(".jpg") or wallpaper.endswith(".png"):
+        wallpapers.append(userfolder + "/.wallpapers/" + str(wallpaper))
     # print(wallpapers)
     return wallpapers
 

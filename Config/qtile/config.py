@@ -17,11 +17,6 @@ screenMinimum = 2
 
 homefolder = expanduser('~')
 
-files = dict(
-  autostart    = homefolder + '/scripts/autostart.sh',
-  pkgldmp   = homefolder + '/scripts/pkgldmp.sh'
-)
-
 groups = getGroups(screenMinimum)
 screens = getScreens(
     groups = groups,
@@ -47,13 +42,13 @@ layouts = [
 def autostart() -> None:
   # Popen([f'pacman -S - < { files["aur_pkgs"] }'])
 
-  Popen([files["autostart"]])
+  Popen(["qtile-autostart.sh"])
   return
 
 @hook.subscribe.shutdown
 def shutdown() -> None:
   # dump list of installed packages
-  Popen([files["pkgldmp"]])
+  Popen(["qtile-shutdown.sh"])
   return
 
 

@@ -12,6 +12,9 @@ from widgets import widget_panel_left, widget_panel_right
 from conformity import theme, wp_mode
 from widgets import gb_settings
 
+# from cv2 import *
+# from PIL import Image
+
 """
 Screenman.py
 
@@ -98,7 +101,7 @@ def backlight(action):
     return f
 
 # def proc_id(window): # Returns a string
-#     xprop_id_out = check_output(["xprop -id 0x{}".format(window.info()["id"])])
+#     xprop_id_out = check_output([f"xprop -id 0x{window.info()["id"]}])
 #     proc_id = match(r"_NET_WM_PID.+= ([\d+)", xprop_id_out).group(0)
 #     sys.stderr.write(proc_id)
 #     return proc_id
@@ -121,3 +124,12 @@ def getScreens(groups, ns_screens, ns_specials, wallpapers):
       wallpaper_mode = "stretch",
     ) for i in range(ns_screens)
   ]
+
+# def autoBrightness() -> int:
+  # camera = VideoCapture(0)
+  # result, image = cam.read()
+  # if result:
+    # 
+  # else:
+    # return -1
+
