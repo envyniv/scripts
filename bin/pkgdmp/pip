@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pip list | tail +3 | cut -d ' ' -f 1

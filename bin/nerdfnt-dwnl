@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+###############################################################################
+#                                                                             #
+# small util made to download my favourite fonts from the Nerd Fonts project. #
+#                                                                             #
+###############################################################################
+
+FONTFOLDER="$HOME/.local/share/fonts/"
+
+repoUrl="https://github.com/ryanoasis/nerd-fonts"
+TEMPFOLDER="/tmp"
+declare -a desiredFonts=("Mononoki" "Ubuntu")
+
+LATEST=$(git-latest "$repoUrl")
+
+for font in "${desiredFonts[@]}"
+do
+   wget --quiet "$repoUrl/releases/download/$LATEST/$font.zip" -P "$TEMPFOLDER/"
+   unzip -q -o "$TEMPFOLDER/$font.zip" "*.ttf" -d "$FONTFOLDER"
+   rm "$TEMPFOLDER/$font.zip"
+done
+
+find "$FONTFOLDER" -type f -name '*Windows*' -delete

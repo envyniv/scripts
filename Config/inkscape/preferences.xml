@@ -1078,12 +1078,12 @@
      flattening="0" />
   <group
      id="theme"
-     defaultPreferDarkTheme="1"
-     defaultIconTheme="Papirus-Colors-Dark"
-     defaultGtkTheme="Breeze"
+     defaultPreferDarkTheme="0"
+     defaultIconTheme="Adwaita"
+     defaultGtkTheme="Adwaita"
      narrowSpinButton="1"
      preferDarkTheme="1"
-     darkTheme="0"
+     darkTheme="1"
      symbolicIcons="0"
      symbolicDefaultBaseColors="1"
      symbolicDefaultHighColors="1">

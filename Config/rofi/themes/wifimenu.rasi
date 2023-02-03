@@ -1,0 +1,12 @@
+@import "squared"
+
+configuration {
+	location: 3;
+	
+}
+
+window {
+    width: 600;
+    children: [listview];
+    y-offset: 20;
+}

@@ -1,7 +1,7 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key, Click, Drag, EzKey, KeyChord
 
-from screenman import screenshot, backlight #, screens
+from screenman import screenshot, backlight, bar_settings as barset
 
 """
 This is where the magic happens.
@@ -12,8 +12,6 @@ Like those for screens and groups, are automatically bound.
 Bindings for groups are made by picking the first character in the group name.
 It is assumed no two groups start with the same letter, merely because I don't-
 wanna extend the generating function.
-
-Bindings for screens are much simpler, going from 1 through out 9, and then 0.
 """
 
 # https://raw.githubusercontent.com/qtile/qtile/master/libqtile/backend/x11/xkeysyms.py
@@ -28,13 +26,13 @@ keybinds_system = [
 ]
 
 keybinds_wm = [
-    EzKey("M-<space>",    lazy.spawn("rofi -show drun -show-icons -theme drun-nord"),  desc="Bring up rofi"),
+    EzKey("M-<space>",    lazy.spawn(f"rofi-drun {barset['size']}"),  desc="Bring up rofi"),
     EzKey("M-C-x",        lazy.window.kill(),                         desc="Kill focused window"),
 
-    EzKey("M-<Tab>",    lazy.layout.next(),                         desc="Switch window focus to other pane(s) of stack"),
+    EzKey("M-A-<Tab>",    lazy.layout.next(),                         desc="Switch window focus to other pane(s) of stack"),
 
     EzKey("M-C-r",        lazy.layout.normalize(),                    desc="Reset all window sizes"),
-    EzKey("M-A-<Tab>",      lazy.spawn("rofi -show window"),            desc="Window Switcher"),
+    EzKey("M-<Tab>",      lazy.spawn("rofi -show window"),            desc="Window Switcher"),
     EzKey("M-S-f",        lazy.window.toggle_floating(),              desc="Put the focused window to/from floating mode"),
     # EzKey("M-C-f",        lazy.window.toggle_fullscreen(),            desc="Put the focused window to/from fullscreen mode"),
     
@@ -51,7 +49,7 @@ keybinds_wm = [
         ],
         name = "缾 襁 ",
         mode = True,
-        # desc = "Activate window manipulation mode.",
+        desc = "Activate window manipulation mode.",
     ),
 
     # EzKey("M-C-S-<Left>",   lazy.layout.shuffle_left(),                 desc="Move window to the left"),
@@ -68,8 +66,8 @@ keybinds_wm = [
 keybinds_input = [ # inputting snippets, characters, and using media keys
 
     #Input things
-    EzKey("M-c",                      lazy.spawn('rofimoji'), desc="Character selector"),
-    EzKey("M-S-x",                    lazy.spawn("rofi -modi emoji -show emoji"), desc="Snippet Manager"),
+    EzKey("M-A-c",                      lazy.spawn('rofimoji'), desc="Character selector"),
+    # EzKey("M-S-x",                    lazy.spawn("rofi -modi emoji -show emoji"), desc="Snippet Manager"),
 
     EzKey("<XF86AudioLowerVolume>",   lazy.spawn("pw-volume change -5%"),   desc="Lower Volume"),
     EzKey("<XF86AudioRaiseVolume>",   lazy.spawn("pw-volume change +5%"),   desc="Raise Volume"),
@@ -90,11 +88,12 @@ keybinds_input = [ # inputting snippets, characters, and using media keys
     EzKey("<XF86TouchpadToggle>",  lazy.spawn(""), desc="Toggle Touchpad"),
 
     EzKey("<Print>",                  lazy.function(screenshot()),     desc="Take a screenshot"),
-    EzKey("S-<Print>",                lazy.function(screenshot(select=True)),     desc="Take a screenshot, select an area"),
+    # EzKey("S-<Print>",                lazy.function(screenshot(select=True)),     desc="Take a screenshot, select an area"),
     # EzKey("M-<Print>",                lazy.function(screenshot(select=True)),     desc="Screenshot current window"),
     EzKey("<XF86Calculator>",         lazy.spawn("rofi -show calc -no-show-match -no-sort"), desc="Calculator"),
+    EzKey("<XF86PowerOff>",         lazy.spawn("rofi-powermenu"), desc="Bring up powermenu"),
 
-    EzKey("C-<Insert>", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
+    EzKey("M-<Insert>", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
 ]
 
 def groupKeybind(groups):
@@ -105,14 +104,6 @@ def groupKeybind(groups):
             EzKey(f"M-S-{i.name[0]}", lazy.window.togroup(i.name), desc=f"Move focused window to group '{i.name}'"),
         ])
     return keybinds_groups
-
-# def screenKeybind(screens):
-#     keybinds_screens = []
-#     for i in screens:
-#         keybinds_screens.extend([
-#             EzKey("", lazy.toscreen())
-#         ])
-#     return keybinds_screens
 
 def getKeys(g):
     return keybinds_system + keybinds_wm + keybinds_input + groupKeybind(g)

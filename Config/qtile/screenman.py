@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from time import time
+from random import choice
 
 from libqtile.config import Screen
 from libqtile.bar import Bar
@@ -8,9 +9,11 @@ from libqtile import qtile, hook
 from libqtile.lazy import lazy
 
 from qtile_extras.widget import GroupBox
+
 from widgets import widget_panel_left, widget_panel_right
 from conformity import theme, wp_mode
-from widgets import gb_settings
+from widgets import gb_settings, bar_settings
+
 
 # from cv2 import *
 # from PIL import Image
@@ -29,12 +32,6 @@ WARNING - `xbacklight` is outdated. Please install acpilight!
 
 # if IS_XEPHYR:
 # elif IS_WAYLAND:
-
-bar_settings = dict(
-  size=18,
-  background = theme["background"],
-  #margin = 3,
-)
 
 @hook.subscribe.current_screen_change
 def reconfScreens() -> None:
@@ -120,16 +117,8 @@ def getScreens(groups, ns_screens, ns_specials, wallpapers):
         ] + widget_panel_right,
         **bar_settings
       ),
-      wallpaper = wallpapers[i],
-      wallpaper_mode = "stretch",
+      wallpaper = choice(wallpapers),
+      wallpaper_mode = "fill",
     ) for i in range(ns_screens)
   ]
-
-# def autoBrightness() -> int:
-  # camera = VideoCapture(0)
-  # result, image = cam.read()
-  # if result:
-    # 
-  # else:
-    # return -1
 

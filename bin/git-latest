@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# This gets the latest release tag in a github repo 
+git -c 'versionsort.suffix=-' ls-remote --tags --sort='v:refname' "$1" | tail --lines=1 | cut --delimiter='/' --fields=3

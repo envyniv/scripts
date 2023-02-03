@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+WHEREAMI=$(dirname $(realpath $0))
+
+for file in $WHEREAMI/pkgdmp/*; do
+	if [ ! -d "$1" ]; then
+		echo -e "$(basename $file) PACKAGES\n-------------------------\n"
+		$file
+		echo ""
+	else
+		$file > "$1/$(basename $file).pkgs"
+	fi
+	done
+

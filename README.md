@@ -1,4 +1,4 @@
-# Scripts (And dotfiles)
+# My dotfiles
 
 ```
 In this repo, I have put,
@@ -18,21 +18,39 @@ I personally use arch, so you might need to tweak things if you're using a
 different distro.
 
 ## Features (Real!)
-- [Qtile](https://github.com/qtile/qtile) (+ [qtile-extras](https://github.com/elParaguayo/qtile-extras)!)
-- - Very cool topbar
-- - No application can take over your screen.
-- - Flexible screens, groups, and groupbars
-- Synth-shell bash prompt
-- Neofetch settings
+- custom `user-dirs.dirs`
+- [Custom python bash prompt](./Config/customprompt.py) (buggy as hell rn)
+
+<details><summary>Configs</summary>
+
+- the bash shell ([.profile](./profile) and [.bashrc](./bashrc))
+- [neofetch](./Config/neofetch/config.conf)
+- [alacritty](./Config/alacritty/alacritty.yml)
+- [micro](./Config/micro/)
+- [clight](./Config/clight.conf)
+- [dunst](./Config/dunst/dunstrc)
+- [mopidy](./Config/mopidy/mopidy.conf)
+- [Qtile](./Config/qtile/) (requires [qtile-extras](https://github.com/elParaguayo/qtile-extras)!)
+- [rofi](./Config/rofi/)
+- [matrixcli](./Config/live-matrixcli-cfg.py)
+
+</details>
+
 - Misc scripts
+- - ["live chat > text file" script using matrixcli](./bin/live-chat.sh)
+- - simplistic [setup script](./setup.sh)
+- - Rofi powermenu lifted from [here](https://github.com/adi1090x/rofi#powermenus) and [edited to fit my needs](./bin/rofi-powermenu)
+- - Dumb [script](./bin/nf-dl) that downloads my favourite [Nerd Fonts](https://www.nerdfonts.com/)
 - - [Acer Swift 1 V1.08 Suspension Fix](https://wiki.archlinux.org/title/Acer_Swift_1_SF114-34#Suspension)
 
-## Features (Not real, yet!)
-- Dependency installer script
-- *Paused* applications group, "`kill -STOP` and `-CONT`"-based.
-- Better volume management
-- Better network management
-- More keychords idk
+
+## TODO
+- installed packages backupper and installer
+- Dependency installer script?
+- Application pausing and resuming (`kill -STOP`/`kill -CONT`)
+- Application-specific volume management
+- Easier network management (rofi?)
+<!-- - More keychords idk -->
 - GPU and CPU thermal sensors indicators in topbar
 - World domination
 - Dynamic-er groups

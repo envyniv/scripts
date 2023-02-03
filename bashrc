@@ -1,5 +1,5 @@
 export FUNCNEST=100 # forkbomb killer
-export HISTFILESIZE=5000
+export HISTFILESIZE=10000
 export HISTFILE=$HOME/.bash_history
 export HISTSIZE=500
 

@@ -1,9 +1,10 @@
 import os
 
 from libqtile.lazy import lazy
-# from libqtile import widget
+
 from qtile_extras import widget
 from qtile_extras.widget.decorations import PowerLineDecoration
+# from screenman import bar_settings
 
 from conformity import theme, icns
 # from screenman import backlight
@@ -18,6 +19,34 @@ Widgets
 
 This is where I set up all my widgets for reuse
 """
+
+bar_settings = dict(
+  size=18,
+  background = theme["background"],
+)
+
+gb_settings = dict(
+        center_aligned = True,
+        disable_drag = True,
+        use_mouse_wheel = True,
+
+        background                  = theme["text_dark"],
+        active                      = theme["text_light"],
+        inactive                    = theme["dull"],
+        highlight_color             = theme["dull"],
+        urgent_border               = theme["batterylow"],
+        urgent_text                 = theme["text_light"],
+        other_current_screen_border = theme["dull"],
+        other_screen_border         = theme["dull"],
+        this_current_screen_border  = theme["accent"],
+        this_screen_border          = theme["accent"],
+
+        margin = 3,
+        
+        urgent_alert_method = "block",
+        highlight_method = "line",
+        # visible_groups to be changed depending on screen number and available groups
+)
 
 bklghtpath = '/sys/class/backlight'
 
@@ -44,7 +73,7 @@ clipboard = widget.Clipboard(
     fmt = "\uf64c {}",
     timeout = None,
     mouse_callbacks = {
-        "Button1":lazy.spawn("rofi-greenclip"),
+        "Button1":lazy.spawn("rofi -modi 'clipboard:greenclip print' -show clipboard -run-command '{cmd}'"),
     },
     decorations=[PowerLineDecoration()]
 
@@ -95,6 +124,12 @@ This is kind of a hack. We're not actually using PulseAudio stuff but goddamn we
 #     update_interval=5,
 # )
 widget_panel_left = [
+    widget.TextBox(
+      fmt = "",
+      mouse_callbacks = {
+        "Button1":lazy.spawn("rofi-powermenu"),
+      },
+    ),
     widget.CPU(
         background = theme["cpu"],
         format = '\ueabe {load_percent}%',
@@ -166,7 +201,9 @@ widget_panel_right = [
         foreground = theme["text_dark"],
         active_colour = theme["text_dark"],
         inactive_colour = theme["dull"],
-
+        mouse_callbacks = {
+          "Button3":lazy.spawn(f"rofi-wifimenupp {bar_settings['size']}"),
+        },
         decorations = [
             PowerLineDecoration(path = "forward_slash")
         ]
@@ -205,26 +242,3 @@ widget_panel_right = [
         format="%d/%m/%y %H:%M \uf5ef",
     ),
 ]
-
-gb_settings = dict(
-        center_aligned = True,
-        disable_drag = True,
-        use_mouse_wheel = True,
-
-        background                  = theme["text_dark"],
-        active                      = theme["text_light"],
-        inactive                    = theme["dull"],
-        highlight_color             = theme["dull"],
-        urgent_border               = theme["batterylow"],
-        urgent_text                 = theme["text_light"],
-        other_current_screen_border = theme["dull"],
-        other_screen_border         = theme["dull"],
-        this_current_screen_border  = theme["accent"],
-        this_screen_border          = theme["accent"],
-
-        margin = 3,
-        
-        urgent_alert_method = "block",
-        highlight_method = "line",
-        # visible_groups to be changed depending on screen number and available groups
-)

@@ -73,7 +73,7 @@ class BasicPromptSection: # generic class for prompt sections
     else:
       return ""
 
-  def clr_sanity_check(self) -> None:
+  def sanityCheck(self) -> None:
     """
     Ensures the foreground color doesn't match the background color,
     as to not have unreadable text.
@@ -84,23 +84,17 @@ class BasicPromptSection: # generic class for prompt sections
       self.style = "bright"
     return
 
-  def __init__(self, txt = " ", bg = "", fg = "", st="") -> None:
-    self.text     = txt
-    self.fgClr    = fg
-    self.bgClr    = bg
-    self.style    = st
+  def __init__(self, **kwargs) -> None:
+    for key, val in kwargs.items():
+      setattr(self, key, val)
     return
 
-  def draw(self) -> None:
-    self.clr_sanity_check()
-    # print(f"[{self.}]{self.text}[/{}]")
-    print(self.getANSI(self.style, "s") + # style
-      self.getANSI(self.fgClr) +      # foreground color
-      self.getANSI(self.bgClr, "b") + # background color
-      self.text + Style.RESET_ALL, end=""
-    )
-
-  
+  def __str__(self) -> str:
+    self.sanityCheck()
+    return (self.getANSI(self.style, "s") + # style
+          self.getANSI(self.fgClr) +      # foreground color
+          self.getANSI(self.bgClr, "b") + # background color
+          self.text + Style.RESET_ALL)
 
 class PromptSection(BasicPromptSection): 
   sep_left: str  = "" # left separator character
@@ -108,31 +102,14 @@ class PromptSection(BasicPromptSection):
   sep_right: str = "" # right separator character
   sep_rbgc: str  = "" # right separator bg color
 
-  def __init__(self,
-               sl: str = "",
-               txt: str= "",
-               sr: str = "",
-               bg: str = "",
-               fg: str = "",
-               st: str = ""
-               ) -> None:
-    self.sep_left = sl
-    self.sep_right= sr
-    BasicPromptSection.__init__(self, txt, bg, fg, st)
-    return
-
-  def draw(self) -> None:
-    self.clr_sanity_check()
-    print(self.getANSI(self.bgClr) +
-      self.getANSI(self.sep_lbgc, "b")
-      + self.sep_left + Style.RESET_ALL, end=""
-    )
-    BasicPromptSection.draw(self)
-    print(self.getANSI(self.bgClr) +
-      self.getANSI(self.sep_rbgc, "b") +
-      self.sep_right + Style.RESET_ALL, end=""
-    )
-    return
+  def __str__(self) -> str:
+    return ((self.getANSI(self.bgClr) +
+          self.getANSI(self.sep_lbgc, "b")
+          + self.sep_left + Style.RESET_ALL) + 
+          BasicPromptSection.__str__(self) + 
+          (self.getANSI(self.bgClr) +
+           self.getANSI(self.sep_rbgc, "b") +
+           self.sep_right + Style.RESET_ALL))
 
 username = getuser()
 path = getcwd()
@@ -159,7 +136,7 @@ class PwdPromptSect(PromptSection):
             return folder_colors[color]
     return ""
   
-  def __init__(self, sl: str, sr: str) -> None:
+  def __init__(self, **kwargs) -> None:
     parsed_path = path
     for element in special_folders:
       if element in path:
@@ -174,17 +151,20 @@ class PwdPromptSect(PromptSection):
       # self.text +=
     else:
       self.bgClr = "lightblack_ex"
+
+    self.fgClr = self.get_dir_color(path)
     
-    PromptSection.__init__(self, sl, self.text, sr, self.bgClr,
-    self.get_dir_color(path)
-    )
+    PromptSection.__init__(self, **kwargs)
     return
 
 class CmdAtHstLine(PromptSection):
   def __init__(self):
-    with open(environ["HISTFILE"]) as file:
-      self.text = f"@{len(file.readlines())}"
-      file.close()
+    if exists(environ["HISTFILE"]):
+      with open(environ["HISTFILE"]) as file:
+        self.text = f"@{len(file.readlines())}"
+        file.close()
+    else:
+      self.text = "@?"
     return
 
 class VanillaPrompt(PromptSection):
@@ -195,53 +175,58 @@ class VanillaPrompt(PromptSection):
     else:
       self.fgClr = "red"
     self.text = "$"
+    self.style = "bright"
     
-    PromptSection.__init__(self, txt=self.text, fg=self.fgClr, st="bright")
+    PromptSection.__str__(self)
     return
 
-# class Spacer(BasicPromptSelection):
-  
+"""
+class ResultPrompt(PromptSection):
 
-# class ResultPrompt(PromptSection):
-# 
-  # def get_time(self) -> str:
-    # time = 0
-    # if (exists(argv[2])):
-      # with open(argv[2]) as stmpfile:
-        # time = int(stmpfile.read())
-        # stmpfile.close()
-      # remove(argv[2])
-          # 
-      # return str(time)
-    # else:
-      # return "file not found"
-# 
-  # def __init__(self) -> None:
-    # if (argv[1] == "1"):
-      # self.text = self.getColorProper("red")
-    # else:
-      # self.text = self.getColorProper("green")
-    # self.text += self.get_time()
-    # 
-    # PromptSection.__init__(self, txt = self.text, st = "bright")
-    # return
+  def get_time(self) -> str:
+    time = 0
+    if (exists(argv[2])):
+      with open(argv[2]) as stmpfile:
+        time = int(stmpfile.read())
+        stmpfile.close()
+      remove(argv[2])
+          
+      return str(time)
+    else:
+      return "file not found"
+
+  def __init__(self) -> None:
+    if (argv[1] == "1"):
+      self.text = self.getColorProper("red")
+    else:
+      self.text = self.getColorProper("green")
+    self.text += self.get_time()
+    
+    PromptSection.__init__(self, txt = self.text, st = "bright")
+    return
+"""
 
 class PromptList():
   def __init__(self, *args) -> None:
     for index, elem in enumerate(args):
       if (index<(len(args)-1)):
         elem.sep_rbgc = args[index+1].bgClr
-      elem.draw()
+      print("\1"+str(elem)+"\2", end = "")
     return
 
 PromptList(
-  PromptSection("", username, "", "magenta", st="bright"),
-  PwdPromptSect("", ""),
-  BasicPromptSection(),
-  CmdAtHstLine(),
-  BasicPromptSection(),
+  PromptSection(
+          sep_left = "",
+          text = username,
+          sep_right = "",
+          bgClr = "magenta",
+          st = "bright"
+         ),
+  PwdPromptSect(sep_left = "", sep_right = ""),
+  BasicPromptSection(text="\n"),
+  # CmdAtHstLine(),
+  # BasicPromptSection(),
   VanillaPrompt(),
-  # ResultPrompt(),
 )
 
 exit()

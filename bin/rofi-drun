@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+YOFFSET=$1
+
+rofi -show drun \
+-show-icons \
+-theme-str \
+"window {location:northeast;y-offset:$YOFFSET;children:[listview, inputbar];}"

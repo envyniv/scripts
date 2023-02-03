@@ -1,7 +1,7 @@
-__pycache__/
-.mypy_cache/
-*.py[cod]
-*$py.class
+**/__pycache__/
+**/.mypy_cache/
+**/*.py[cod]
+**/*$py.class
 
-buffers/
+**/buffers/
 

@@ -2,19 +2,18 @@ from os import listdir
 
 def getWPs(userfolder):
     wallpapers = []
-    for wallpaper in listdir(userfolder + "/.wallpapers"):
+    for wallpaper in listdir(userfolder + "/.local/share/wallpapers"):
       if wallpaper.endswith(".jpg") or wallpaper.endswith(".png"):
-        wallpapers.append(userfolder + "/.wallpapers/" + str(wallpaper))
-    # print(wallpapers)
+        wallpapers.append(userfolder + "/.local/share/wallpapers/" + str(wallpaper))
     return wallpapers
 
 wp_mode = "fill"
 
 theme = dict(
     foreground ='#CFCCD6',
-    background ='#101010',
+    background ='#1e2127',
     text_light ="#e5e5e5",
-    text_dark  ='#222222',
+    text_dark  ='#1e2127',
     dull       ='#495068',
 
     cpu        ='#0043aa',

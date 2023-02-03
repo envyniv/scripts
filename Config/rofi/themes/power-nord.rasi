@@ -1,6 +1,0 @@
-@import "squared-nord"
-
-window {
-    width: 200;
-    children: [listview];
-}
